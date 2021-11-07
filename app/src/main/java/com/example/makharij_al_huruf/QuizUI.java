@@ -141,14 +141,23 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
             }
         }
         userAnswers.add(((Button)v).getText().toString());
+//        button1.setEnabled(false);
+//        button2.setEnabled(false);
+//        button3.setEnabled(false);
+//        button4.setEnabled(false);
     }
 
 
     public void generateQuestion(){
+
         button1.setBackgroundColor(new Button(this).getHighlightColor());
         button2.setBackgroundColor(new Button(this).getHighlightColor());
         button3.setBackgroundColor(new Button(this).getHighlightColor());
         button4.setBackgroundColor(new Button(this).getHighlightColor());
+//        button1.setEnabled(true);
+//        button2.setEnabled(true);
+//        button3.setEnabled(true);
+//        button4.setEnabled(true);
         int randomIndex = generator.nextInt(keyList.size());
         String randomQuestion = keyList.get(randomIndex);
         textView.setText(randomQuestion);
