@@ -7,7 +7,7 @@
     tools:context=".AlphabetDetails">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/makhrijImage"
         android:layout_width="247dp"
         android:layout_height="228dp"
         android:layout_marginTop="40dp"
@@ -25,11 +25,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@android:drawable/ic_media_play" />
+        app:layout_constraintTop_toBottomOf="@+id/makhrijImage"
+        app:srcCompat="@android:drawable/ic_media_play"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/makhrijName"
         android:layout_width="409dp"
         android:layout_height="88dp"
         android:layout_marginStart="1dp"
@@ -41,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/makhrijDetails"
         android:layout_width="409dp"
         android:layout_height="230dp"
         android:layout_marginStart="1dp"
@@ -50,5 +51,5 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/makhrijName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,40 +7,40 @@
     tools:context=".Alphabet">
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/tha"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:text="ث"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/ta"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/ta"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:text="ت"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/ba"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/ba"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:text="ب"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/alif"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/alif"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="10dp"
@@ -51,40 +51,40 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/daal"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="د"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintEnd_toStartOf="@+id/kha"
+        app:layout_constraintTop_toBottomOf="@+id/tha" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/kha"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="خ"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintEnd_toStartOf="@+id/ha"
+        app:layout_constraintTop_toBottomOf="@+id/ta" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/ha"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ح"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintEnd_toStartOf="@+id/jeem"
+        app:layout_constraintTop_toBottomOf="@+id/ba" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/jeem"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
@@ -92,43 +92,43 @@
         android:text="ج"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/alif" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/sin"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="س"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button10"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintEnd_toStartOf="@+id/za"
+        app:layout_constraintTop_toBottomOf="@+id/daal" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/za"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ز"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button11"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintEnd_toStartOf="@+id/ra"
+        app:layout_constraintTop_toBottomOf="@+id/kha" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/ra"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ر"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button12"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintEnd_toStartOf="@+id/zaal"
+        app:layout_constraintTop_toBottomOf="@+id/ha" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/zaal"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
@@ -136,43 +136,43 @@
         android:text="ذ"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/jeem" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/taa"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ط"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button14"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
+        app:layout_constraintEnd_toStartOf="@+id/zad"
+        app:layout_constraintTop_toBottomOf="@+id/sin" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/zad"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ض"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button15"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
+        app:layout_constraintEnd_toStartOf="@+id/sad"
+        app:layout_constraintTop_toBottomOf="@+id/za" />
 
     <Button
-        android:id="@+id/button15"
+        android:id="@+id/sad"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ص"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button16"
-        app:layout_constraintTop_toBottomOf="@+id/button11" />
+        app:layout_constraintEnd_toStartOf="@+id/shin"
+        app:layout_constraintTop_toBottomOf="@+id/ra" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/shin"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
@@ -180,43 +180,43 @@
         android:text="ش"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button12" />
+        app:layout_constraintTop_toBottomOf="@+id/zaal" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/fa"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ف"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button18"
-        app:layout_constraintTop_toBottomOf="@+id/button13" />
+        app:layout_constraintEnd_toStartOf="@+id/gayn"
+        app:layout_constraintTop_toBottomOf="@+id/taa" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/gayn"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="غ"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button19"
-        app:layout_constraintTop_toBottomOf="@+id/button14" />
+        app:layout_constraintEnd_toStartOf="@+id/ayn"
+        app:layout_constraintTop_toBottomOf="@+id/zad" />
 
     <Button
-        android:id="@+id/button19"
+        android:id="@+id/ayn"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ع"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button20"
-        app:layout_constraintTop_toBottomOf="@+id/button15" />
+        app:layout_constraintEnd_toStartOf="@+id/zaa"
+        app:layout_constraintTop_toBottomOf="@+id/sad" />
 
     <Button
-        android:id="@+id/button20"
+        android:id="@+id/zaa"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
@@ -224,43 +224,43 @@
         android:text="ظ"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button16" />
+        app:layout_constraintTop_toBottomOf="@+id/shin" />
 
     <Button
-        android:id="@+id/button21"
+        android:id="@+id/meem"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="م"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button22"
-        app:layout_constraintTop_toBottomOf="@+id/button17" />
+        app:layout_constraintEnd_toStartOf="@+id/lam"
+        app:layout_constraintTop_toBottomOf="@+id/fa" />
 
     <Button
-        android:id="@+id/button22"
+        android:id="@+id/lam"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ل"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button23"
-        app:layout_constraintTop_toBottomOf="@+id/button18" />
+        app:layout_constraintEnd_toStartOf="@+id/kaf"
+        app:layout_constraintTop_toBottomOf="@+id/gayn" />
 
     <Button
-        android:id="@+id/button23"
+        android:id="@+id/kaf"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ك"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button24"
-        app:layout_constraintTop_toBottomOf="@+id/button19" />
+        app:layout_constraintEnd_toStartOf="@+id/qaf"
+        app:layout_constraintTop_toBottomOf="@+id/ayn" />
 
     <Button
-        android:id="@+id/button24"
+        android:id="@+id/qaf"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
@@ -268,43 +268,43 @@
         android:text="ق"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button20" />
+        app:layout_constraintTop_toBottomOf="@+id/zaa" />
 
     <Button
-        android:id="@+id/button25"
+        android:id="@+id/hamza"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ء"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button26"
-        app:layout_constraintTop_toBottomOf="@+id/button21" />
+        app:layout_constraintEnd_toStartOf="@+id/haa"
+        app:layout_constraintTop_toBottomOf="@+id/meem" />
 
     <Button
-        android:id="@+id/button26"
+        android:id="@+id/haa"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ه"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button27"
-        app:layout_constraintTop_toBottomOf="@+id/button22" />
+        app:layout_constraintEnd_toStartOf="@+id/wow"
+        app:layout_constraintTop_toBottomOf="@+id/lam" />
 
     <Button
-        android:id="@+id/button27"
+        android:id="@+id/wow"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="و"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/button28"
-        app:layout_constraintTop_toBottomOf="@+id/button23" />
+        app:layout_constraintEnd_toStartOf="@+id/noon"
+        app:layout_constraintTop_toBottomOf="@+id/kaf" />
 
     <Button
-        android:id="@+id/button28"
+        android:id="@+id/noon"
         android:layout_width="88dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
@@ -312,10 +312,10 @@
         android:text="ن"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button24" />
+        app:layout_constraintTop_toBottomOf="@+id/qaf" />
 
     <Button
-        android:id="@+id/button29"
+        android:id="@+id/ya"
         android:layout_width="104dp"
         android:layout_height="54dp"
         android:layout_marginBottom="19dp"
