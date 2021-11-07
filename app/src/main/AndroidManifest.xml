@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MakharijalHuruf">
         <activity
+            android:name=".Result"
+            android:exported="true" />
+        <activity
             android:name=".QuizUI"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".AlphabetDetails"
@@ -26,9 +29,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

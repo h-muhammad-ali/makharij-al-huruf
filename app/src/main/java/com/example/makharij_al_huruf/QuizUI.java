@@ -2,8 +2,10 @@ package com.example.makharij_al_huruf;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -51,6 +54,9 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
         put("و", "Sound produced from Rounding both lips and not closing the mouth");
         put("ه", "Sound produced from the End of Throat");
         put("ي", "Sound produced from Tongue touching the center of the mouth roof");}};
+    List<String> questions = new ArrayList<String>();
+    List<String> correctAnswers = new ArrayList<String>();
+    List<String> userAnswers = new ArrayList<String>();
     TextView textView;
     Button button1;
     Button button2;
@@ -91,11 +97,32 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
                     service.schedule(this::generateQuestion, 2, TimeUnit.SECONDS);
                     counter++;
                 }else{
-                    //Move to next activity
+                    Log.i("Enter", "New Intent");
+//                    ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+//                    service.schedule(this::moveToResult, 2, TimeUnit.SECONDS);
+                    Intent intent = new Intent(QuizUI.this, Result.class);
+                    Bundle args = new Bundle();
+                    args.putSerializable("questions",(Serializable)questions);
+                    args.putSerializable("correctAnswers",(Serializable)correctAnswers);
+                    args.putSerializable("userAnswers",(Serializable)userAnswers);
+                    intent.putExtra("BUNDLE",args);
+//                    intent.putExtra("questions", (Parcelable) questions);
+//                    intent.putExtra("correctAnswers", (Parcelable) correctAnswers);
+//                    intent.putExtra("userAnswers", (Parcelable) userAnswers);
+                    startActivity(intent);
                 }
                 break;
         }
     }
+
+    public void moveToResult(){
+        Intent intent = new Intent(QuizUI.this, Result.class);
+        intent.putExtra("questions", (Parcelable) questions);
+        intent.putExtra("correctAnswers", (Parcelable) correctAnswers);
+        intent.putExtra("userAnswers", (Parcelable) userAnswers);
+        startActivity(intent);
+    }
+
 
     public void verifyAnswer(View v){
         if(table.get(textView.getText().toString()) == ((Button)v).getText()){
@@ -113,6 +140,7 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
                 button4.setBackgroundColor(getResources().getColor(R.color.correct));
             }
         }
+        userAnswers.add(((Button)v).getText().toString());
     }
 
 
@@ -124,6 +152,8 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
         int randomIndex = generator.nextInt(keyList.size());
         String randomQuestion = keyList.get(randomIndex);
         textView.setText(randomQuestion);
+        questions.add(randomQuestion);
+        correctAnswers.add(valueList.get(randomIndex));
         List<String> optionList = new ArrayList<String>();
         optionList.add(valueList.get(randomIndex));
         optionList.add(valueList.get(generator.nextInt(valueList.size())));
@@ -134,5 +164,6 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
         button2.setText(optionList.get(1));
         button3.setText(optionList.get(2));
         button4.setText(optionList.get(3));
+
     }
 }
