@@ -1,6 +1,7 @@
 package com.example.makharij_al_huruf;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.collection.LruCache;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,6 +12,9 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -63,7 +67,8 @@ public class Result extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.share:
                 View rootView = getWindow().getDecorView().findViewById(android.R.id.content);
-                shareImage(store(getScreenShot(rootView), "result"));
+
+                shareImage(store(getScreenshotFromRecyclerView(recyclerView), "result"));
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -78,7 +83,7 @@ public class Result extends AppCompatActivity {
         return bitmap;
     }
 
-    public File store(Bitmap bm, String fileName){
+    public String store(Bitmap bm, String fileName){
         ContextWrapper cw = new ContextWrapper(getApplicationContext());
         // path to /data/data/yourapp/app_data/imageDir
         File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
@@ -99,14 +104,62 @@ public class Result extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return file;
+        Toast.makeText(Result.this, file.getAbsolutePath(), Toast.LENGTH_SHORT).show();
+        Log.i("Store Path: ", file.getAbsolutePath());
+        return file.getAbsolutePath();
     }
 
-    private void shareImage(File file){
+    public Bitmap getScreenshotFromRecyclerView(RecyclerView view) {
+        RecyclerView.Adapter adapter = view.getAdapter();
+        Bitmap bigBitmap = null;
+        if (adapter != null) {
+            int size = adapter.getItemCount();
+            int height = 0;
+            Paint paint = new Paint();
+            int iHeight = 0;
+            final int maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1024);
+
+            // Use 1/8th of the available memory for this memory cache.
+            final int cacheSize = maxMemory / 8;
+            LruCache<String, Bitmap> bitmaCache = new LruCache<>(cacheSize);
+            for (int i = 0; i < size; i++) {
+                RecyclerView.ViewHolder holder = adapter.createViewHolder(view, adapter.getItemViewType(i));
+                adapter.onBindViewHolder(holder, i);
+                holder.itemView.measure(View.MeasureSpec.makeMeasureSpec(view.getWidth(), View.MeasureSpec.EXACTLY),
+                        View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+                holder.itemView.layout(0, 0, holder.itemView.getMeasuredWidth(), holder.itemView.getMeasuredHeight());
+                holder.itemView.setDrawingCacheEnabled(true);
+                holder.itemView.buildDrawingCache();
+                Bitmap drawingCache = holder.itemView.getDrawingCache();
+                if (drawingCache != null) {
+
+                    bitmaCache.put(String.valueOf(i), drawingCache);
+                }
+//                holder.itemView.setDrawingCacheEnabled(false);
+//                holder.itemView.destroyDrawingCache();
+                height += holder.itemView.getMeasuredHeight();
+            }
+
+            bigBitmap = Bitmap.createBitmap(view.getMeasuredWidth(), height, Bitmap.Config.ARGB_8888);
+            Canvas bigCanvas = new Canvas(bigBitmap);
+            bigCanvas.drawColor(Color.WHITE);
+
+            for (int i = 0; i < size; i++) {
+                Bitmap bitmap = bitmaCache.get(String.valueOf(i));
+                bigCanvas.drawBitmap(bitmap, 0f, iHeight, paint);
+                iHeight += bitmap.getHeight();
+                bitmap.recycle();
+            }
+
+        }
+        return bigBitmap;
+    }
+
+    private void shareImage(String path){
         Toast.makeText(Result.this,"shareImage",Toast.LENGTH_SHORT).show();
         Log.i("Share", "Share");
         //Uri uri = Uri.fromFile(file);
-        Uri uri = FileProvider.getUriForFile(Result.this, Result.this.getApplicationContext().getPackageName() + ".provider", file);
+        Uri uri = FileProvider.getUriForFile(Result.this, Result.this.getApplicationContext().getPackageName() + ".fileprovider", new File(path));
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_SEND);
         intent.setType("image/*");

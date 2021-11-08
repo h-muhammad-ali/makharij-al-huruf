@@ -36,8 +36,8 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
         <provider
+            android:authorities="com.example.makharij_al_huruf.fileprovider"
             android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
