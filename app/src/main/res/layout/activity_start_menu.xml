@@ -4,54 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlphabetDetails">
+    tools:context=".StartMenu">
 
-    <ImageView
-        android:id="@+id/makhrijImage"
-        android:layout_width="409dp"
-        android:layout_height="289dp"
+    <TextView
+        android:id="@+id/urduTitle"
+        android:layout_width="407dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/amiri"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/makhrijName"
-        android:layout_width="409dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:fontFamily="@font/amiri"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/makhrijImage" />
-
-    <TextView
-        android:id="@+id/makhrijDetails"
-        android:layout_width="339dp"
+        android:id="@+id/englishTitle"
+        android:layout_width="407dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/type" />
-
-    <TextView
-        android:id="@+id/type"
-        android:layout_width="409dp"
-        android:layout_height="115dp"
         android:fontFamily="@font/amiri"
         android:text="TextView"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/makhrijName" />
+        app:layout_constraintTop_toBottomOf="@+id/urduTitle" />
+
+    <Button
+        android:id="@+id/practice"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/amiri"
+        android:text="Practice"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/englishTitle" />
+
+    <Button
+        android:id="@+id/quiz"
+        android:layout_width="282dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/amiri"
+        android:text="Quiz"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/practice" />
 </androidx.constraintlayout.widget.ConstraintLayout>

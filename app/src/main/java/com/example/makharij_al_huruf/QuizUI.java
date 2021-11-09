@@ -91,6 +91,10 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
             case R.id.optionB:
             case R.id.optionC:
             case R.id.optionD:
+                button1.setClickable(false);
+                button2.setClickable(false);
+                button3.setClickable(false);
+                button4.setClickable(false);
                 verifyAnswer(v);
                 if(counter < 10) {
                     ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
@@ -98,17 +102,14 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
                     counter++;
                 }else{
                     Log.i("Enter", "New Intent");
-//                    ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
-//                    service.schedule(this::moveToResult, 2, TimeUnit.SECONDS);
+                    ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+                    service.schedule(this::moveToResult, 1, TimeUnit.SECONDS);
                     Intent intent = new Intent(QuizUI.this, Result.class);
                     Bundle args = new Bundle();
                     args.putSerializable("questions",(Serializable)questions);
                     args.putSerializable("correctAnswers",(Serializable)correctAnswers);
                     args.putSerializable("userAnswers",(Serializable)userAnswers);
                     intent.putExtra("BUNDLE",args);
-//                    intent.putExtra("questions", (Parcelable) questions);
-//                    intent.putExtra("correctAnswers", (Parcelable) correctAnswers);
-//                    intent.putExtra("userAnswers", (Parcelable) userAnswers);
                     startActivity(intent);
                 }
                 break;
@@ -149,7 +150,10 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
 
 
     public void generateQuestion(){
-
+        button1.setClickable(true);
+        button2.setClickable(true);
+        button3.setClickable(true);
+        button4.setClickable(true);
         button1.setBackgroundColor(new Button(this).getHighlightColor());
         button2.setBackgroundColor(new Button(this).getHighlightColor());
         button3.setBackgroundColor(new Button(this).getHighlightColor());

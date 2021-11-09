@@ -22,9 +22,10 @@
     <Button
         android:id="@+id/optionA"
         android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_height="90dp"
         android:layout_marginTop="35dp"
         android:text="button"
+        app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,8 +34,9 @@
     <Button
         android:id="@+id/optionB"
         android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_height="90dp"
         android:text="button"
+        app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionA" />
@@ -42,8 +44,9 @@
     <Button
         android:id="@+id/optionC"
         android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_height="90dp"
         android:text="button"
+        app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionB" />
@@ -51,8 +54,9 @@
     <Button
         android:id="@+id/optionD"
         android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_height="90dp"
         android:text="button"
+        app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionC" />

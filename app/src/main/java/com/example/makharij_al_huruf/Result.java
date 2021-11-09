@@ -57,6 +57,13 @@ public class Result extends AppCompatActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Intent intent = new Intent(Result.this, StartMenu.class);
+        startActivity(intent);
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.share, menu);
         return super.onCreateOptionsMenu(menu);
@@ -91,11 +98,6 @@ public class Result extends AppCompatActivity {
         File file = new File(directory,"result.jpg");
 
         Toast.makeText(Result.this,"store",Toast.LENGTH_SHORT).show();
-//        String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Screenshots";
-//        File dir = new File(dirPath);
-//        if(!dir.exists())
-//            dir.mkdirs();
-//        File file = new File(dirPath, fileName);
         try {
             FileOutputStream fOut = new FileOutputStream(file);
             bm.compress(Bitmap.CompressFormat.PNG, 85, fOut);
@@ -173,4 +175,5 @@ public class Result extends AppCompatActivity {
             Toast.makeText(Result.this, "No App Available", Toast.LENGTH_SHORT).show();
         }
     }
+
 }

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.makharij_al_huruf">
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,10 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MakharijalHuruf">
         <activity
-            android:name=".Result"
-            android:exported="true" />
-        <activity
-            android:name=".QuizUI"
+            android:name=".StartMenu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,11 +22,18 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Result"
+            android:exported="true" />
+        <activity
+            android:name=".QuizUI"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".AlphabetDetails"
             android:exported="true" />
         <activity
             android:name=".Alphabet"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"></activity>
@@ -35,9 +41,10 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
         <provider
-            android:authorities="com.example.makharij_al_huruf.fileprovider"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.makharij_al_huruf.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
