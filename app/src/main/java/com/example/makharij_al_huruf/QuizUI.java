@@ -193,4 +193,39 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
         button4.setText(optionList.get(3));
 
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putSerializable("counter", (Serializable)counter);
+        savedInstanceState.putSerializable("optionA", (Serializable)button1.getText());
+        savedInstanceState.putSerializable("optionB", (Serializable)button2.getText());
+        savedInstanceState.putSerializable("optionC", (Serializable)button3.getText());
+        savedInstanceState.putSerializable("optionD", (Serializable)button4.getText());
+        savedInstanceState.putSerializable("letter", (Serializable)textView.getText());
+        savedInstanceState.putSerializable("correct", (Serializable)correctCounter);
+        savedInstanceState.putSerializable("wrong", (Serializable)wrongCounter);
+        savedInstanceState.putSerializable("questions",(Serializable)questions);
+        savedInstanceState.putSerializable("correctAnswers",(Serializable)correctAnswers);
+        savedInstanceState.putSerializable("userAnswers",(Serializable)userAnswers);
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        counter = (Integer)savedInstanceState.getSerializable("counter");
+        button1.setText((String)savedInstanceState.getSerializable("optionA"));
+        button2.setText((String)savedInstanceState.getSerializable("optionB"));
+        button3.setText((String)savedInstanceState.getSerializable("optionC"));
+        button4.setText((String)savedInstanceState.getSerializable("optionD"));
+        textView.setText((String)savedInstanceState.getSerializable("letter"));
+        correctCounter = (Integer)savedInstanceState.getSerializable("correct");
+        correct.setText(String.valueOf(correctCounter));
+        wrongCounter = (Integer)savedInstanceState.getSerializable("wrong");
+        wrong.setText(String.valueOf(wrongCounter));
+        questions = (List<String>)savedInstanceState.getSerializable("questions");
+        correctAnswers = (List<String>)savedInstanceState.getSerializable("correctAnswers");
+        userAnswers = (List<String>)savedInstanceState.getSerializable("userAnswers");
+    }
 }

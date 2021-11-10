@@ -30,6 +30,7 @@ import androidx.appcompat.widget.ShareActionProvider;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -61,11 +62,15 @@ public class Result extends AppCompatActivity {
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    public void onBackPressed() {
         Intent intent = new Intent(Result.this, StartMenu.class);
         startActivity(intent);
     }
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -179,5 +184,17 @@ public class Result extends AppCompatActivity {
             Toast.makeText(Result.this, "No App Available", Toast.LENGTH_SHORT).show();
         }
     }
+
+//    @Override
+//    public void onSaveInstanceState(Bundle savedInstanceState) {
+//        super.onSaveInstanceState(savedInstanceState);
+//        savedInstanceState.putSerializable("view", (Serializable)recyclerView);
+//    }
+//
+//    @Override
+//    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+//        super.onRestoreInstanceState(savedInstanceState);
+//        recyclerView = (RecyclerView)savedInstanceState.getSerializable("view");
+//    }
 
 }
