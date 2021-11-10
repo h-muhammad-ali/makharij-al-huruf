@@ -15,6 +15,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -45,6 +46,9 @@ public class Result extends AppCompatActivity {
         ArrayList<String> questions = (ArrayList<String>) args.getSerializable("questions");
         ArrayList<String> correctAnswers = (ArrayList<String>) args.getSerializable("correctAnswers");
         ArrayList<String> userAnswers = (ArrayList<String>) args.getSerializable("userAnswers");
+        int correct = (Integer) args.getSerializable("correct");
+        getSupportActionBar().setTitle(String.valueOf(correct) + " Correct of 10");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ae988a")));
         Adapter adapter = new Adapter(
                 this,
                 questions,

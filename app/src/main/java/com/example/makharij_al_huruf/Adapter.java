@@ -1,6 +1,7 @@
 package com.example.makharij_al_huruf;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,8 +37,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Viewholder> {
     @Override
     public void onBindViewHolder(@NonNull Adapter.Viewholder holder, int position) {
         holder.question.setText(questions.get(position));
-        holder.correctAnswer.setText(correctAnswers.get(position));
-        holder.userAnswer.setText(userAnswers.get(position));
+        holder.correctAnswer.setText("Correct Answer:\n" + correctAnswers.get(position));
+        holder.userAnswer.setText("Your Answer:\n" + userAnswers.get(position));
+        holder.correctAnswer.setTextColor(context.getResources().getColorStateList(R.color.green));
+        if(holder.userAnswer.getText().equals(holder.correctAnswer.getText())){
+            holder.userAnswer.setTextColor(context.getResources().getColorStateList(R.color.green));
+        }
+        else {
+            holder.userAnswer.setTextColor(context.getResources().getColorStateList(R.color.red));
+        }
     }
 
     @Override

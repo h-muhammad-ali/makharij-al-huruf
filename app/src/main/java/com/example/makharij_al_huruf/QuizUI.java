@@ -9,6 +9,7 @@ import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -62,6 +63,12 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
     Button button2;
     Button button3;
     Button button4;
+    ImageView tick;
+    ImageView cross;
+    TextView correct;
+    TextView wrong;
+    int correctCounter = 0;
+    int wrongCounter = 0;
     int counter = 1;
     List<String> valueList = new ArrayList<String>(table.values());
     List<String> keyList = new ArrayList<String>(table.keySet());
@@ -81,6 +88,10 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
         button3.setOnClickListener(this);
         button4 = findViewById(R.id.optionD);
         button4.setOnClickListener(this);
+        tick = findViewById(R.id.correctCounter);
+        cross = findViewById(R.id.wrongCounter);
+        correct = findViewById(R.id.tickCounter);
+        wrong = findViewById(R.id.crossCounter);
         generateQuestion();
     }
 
@@ -103,12 +114,13 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
                 }else{
                     Log.i("Enter", "New Intent");
                     ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
-                    service.schedule(this::moveToResult, 1, TimeUnit.SECONDS);
+                    service.schedule(this::moveToResult, 2, TimeUnit.SECONDS);
                     Intent intent = new Intent(QuizUI.this, Result.class);
                     Bundle args = new Bundle();
                     args.putSerializable("questions",(Serializable)questions);
                     args.putSerializable("correctAnswers",(Serializable)correctAnswers);
                     args.putSerializable("userAnswers",(Serializable)userAnswers);
+                    args.putSerializable("correct", (Serializable)correctCounter);
                     intent.putExtra("BUNDLE",args);
                     startActivity(intent);
                 }
@@ -127,25 +139,31 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
 
     public void verifyAnswer(View v){
         if(table.get(textView.getText().toString()) == ((Button)v).getText()){
-            v.setBackgroundColor(getResources().getColor(R.color.correct));
+            //v.setBackgroundColor(getResources().getColor(R.color.correct));
+            v.setBackgroundTintList(this.getResources().getColorStateList(R.color.green));
+            correctCounter++;
+            correct.setText(String.valueOf(correctCounter));
         }
         else{
-            v.setBackgroundColor(getResources().getColor(R.color.wrong));
+            wrongCounter = wrongCounter + 1;
+            wrong.setText(String.valueOf(wrongCounter));
+            //v.setBackgroundColor(getResources().getColor(R.color.wrong));
+            v.setBackgroundTintList(this.getResources().getColorStateList(R.color.red));
             if(table.get(textView.getText().toString()) == (button1.getText())){
-                button1.setBackgroundColor(getResources().getColor(R.color.correct));
+                //button1.setBackgroundColor(getResources().getColor(R.color.correct));
+                button1.setBackgroundTintList(this.getResources().getColorStateList(R.color.green));
             }else if(table.get(textView.getText().toString()) == (button2.getText())){
-                button2.setBackgroundColor(getResources().getColor(R.color.correct));
+                //button2.setBackgroundColor(getResources().getColor(R.color.correct));
+                button2.setBackgroundTintList(this.getResources().getColorStateList(R.color.green));
             }else if(table.get(textView.getText().toString()) == (button3.getText())){
-                button3.setBackgroundColor(getResources().getColor(R.color.correct));
+                //button3.setBackgroundColor(getResources().getColor(R.color.correct));
+                button3.setBackgroundTintList(this.getResources().getColorStateList(R.color.green));
             }else{
-                button4.setBackgroundColor(getResources().getColor(R.color.correct));
+                //button4.setBackgroundColor(getResources().getColor(R.color.correct));
+                button4.setBackgroundTintList(this.getResources().getColorStateList(R.color.green));
             }
         }
         userAnswers.add(((Button)v).getText().toString());
-//        button1.setEnabled(false);
-//        button2.setEnabled(false);
-//        button3.setEnabled(false);
-//        button4.setEnabled(false);
     }
 
 
@@ -154,14 +172,10 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
         button2.setClickable(true);
         button3.setClickable(true);
         button4.setClickable(true);
-        button1.setBackgroundColor(new Button(this).getHighlightColor());
-        button2.setBackgroundColor(new Button(this).getHighlightColor());
-        button3.setBackgroundColor(new Button(this).getHighlightColor());
-        button4.setBackgroundColor(new Button(this).getHighlightColor());
-//        button1.setEnabled(true);
-//        button2.setEnabled(true);
-//        button3.setEnabled(true);
-//        button4.setEnabled(true);
+        button1.setBackgroundTintList(this.getResources().getColorStateList(R.color.defaulf_color));
+        button2.setBackgroundTintList(this.getResources().getColorStateList(R.color.defaulf_color));
+        button3.setBackgroundTintList(this.getResources().getColorStateList(R.color.defaulf_color));
+        button4.setBackgroundTintList(this.getResources().getColorStateList(R.color.defaulf_color));
         int randomIndex = generator.nextInt(keyList.size());
         String randomQuestion = keyList.get(randomIndex);
         textView.setText(randomQuestion);
