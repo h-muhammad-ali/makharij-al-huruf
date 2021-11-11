@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CEBEB9"
+    android:textAlignment="center"
+    tools:context=".Alphabet">
+
+    <Button
+        android:id="@+id/tha"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ث"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/za"
+        app:layout_constraintEnd_toStartOf="@+id/ta"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/jeem"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ta"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ت"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/ra"
+        app:layout_constraintEnd_toStartOf="@+id/ba"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tha"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ba"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ب"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/zaal"
+        app:layout_constraintEnd_toStartOf="@+id/alif"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ta"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/alif"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="أ"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/daal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ba"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/daal"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="د"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/zad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/zaal"
+        app:layout_constraintTop_toBottomOf="@+id/alif" />
+
+    <Button
+        android:id="@+id/kha"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="خ"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/sad"
+        app:layout_constraintEnd_toStartOf="@+id/ha"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ha"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ح"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/shin"
+        app:layout_constraintEnd_toStartOf="@+id/jeem"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/kha"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/jeem"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ج"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/sin"
+        app:layout_constraintEnd_toStartOf="@+id/tha"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ha"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sin"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="س"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/gayn"
+        app:layout_constraintEnd_toStartOf="@+id/za"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shin"
+        app:layout_constraintTop_toBottomOf="@+id/jeem" />
+
+    <Button
+        android:id="@+id/za"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ز"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/ayn"
+        app:layout_constraintEnd_toStartOf="@+id/ra"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sin"
+        app:layout_constraintTop_toBottomOf="@+id/tha" />
+
+    <Button
+        android:id="@+id/ra"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ر"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/zaa"
+        app:layout_constraintEnd_toStartOf="@+id/zaal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/za"
+        app:layout_constraintTop_toBottomOf="@+id/ta" />
+
+    <Button
+        android:id="@+id/zaal"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ذ"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/taa"
+        app:layout_constraintEnd_toStartOf="@+id/daal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ra"
+        app:layout_constraintTop_toBottomOf="@+id/ba" />
+
+    <Button
+        android:id="@+id/taa"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ط"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/lam"
+        app:layout_constraintEnd_toStartOf="@+id/zad"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/zaa"
+        app:layout_constraintTop_toBottomOf="@+id/zaal" />
+
+    <Button
+        android:id="@+id/zad"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ض"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/kaf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/taa"
+        app:layout_constraintTop_toBottomOf="@+id/daal" />
+
+    <Button
+        android:id="@+id/sad"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ص"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/qaf"
+        app:layout_constraintEnd_toStartOf="@+id/shin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kha" />
+
+    <Button
+        android:id="@+id/shin"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ش"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/fa"
+        app:layout_constraintEnd_toStartOf="@+id/sin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sad"
+        app:layout_constraintTop_toBottomOf="@+id/ha" />
+
+    <Button
+        android:id="@+id/fa"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ف"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/haa"
+        app:layout_constraintEnd_toStartOf="@+id/gayn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/qaf"
+        app:layout_constraintTop_toBottomOf="@+id/shin" />
+
+    <Button
+        android:id="@+id/gayn"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="غ"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/wow"
+        app:layout_constraintEnd_toStartOf="@+id/ayn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fa"
+        app:layout_constraintTop_toBottomOf="@+id/sin" />
+
+    <Button
+        android:id="@+id/ayn"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ع"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/noon"
+        app:layout_constraintEnd_toStartOf="@+id/zaa"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/gayn"
+        app:layout_constraintTop_toBottomOf="@+id/za" />
+
+    <Button
+        android:id="@+id/zaa"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ظ"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/meem"
+        app:layout_constraintEnd_toStartOf="@+id/taa"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ayn"
+        app:layout_constraintTop_toBottomOf="@+id/ra" />
+
+    <Button
+        android:id="@+id/meem"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="#989DA6"
+        android:text="م"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lam"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/noon"
+        app:layout_constraintTop_toBottomOf="@+id/zaa" />
+
+    <Button
+        android:id="@+id/lam"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="#989DA6"
+        android:text="ل"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/kaf"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/meem"
+        app:layout_constraintTop_toBottomOf="@+id/taa" />
+
+    <Button
+        android:id="@+id/kaf"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="#989DA6"
+        android:text="ك"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lam"
+        app:layout_constraintTop_toBottomOf="@+id/zad" />
+
+    <Button
+        android:id="@+id/qaf"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#989DA6"
+        android:text="ق"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/ya"
+        app:layout_constraintEnd_toStartOf="@+id/fa"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sad" />
+
+    <Button
+        android:id="@+id/ya"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="#989DA6"
+        android:text="ي"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/haa"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qaf" />
+
+    <Button
+        android:id="@+id/haa"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="#989DA6"
+        android:text="ه"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/wow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ya"
+        app:layout_constraintTop_toBottomOf="@+id/fa" />
+
+    <Button
+        android:id="@+id/wow"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="#989DA6"
+        android:text="و"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/noon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/haa"
+        app:layout_constraintTop_toBottomOf="@+id/gayn" />
+
+    <Button
+        android:id="@+id/noon"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="#989DA6"
+        android:text="ن"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/meem"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/wow"
+        app:layout_constraintTop_toBottomOf="@+id/ayn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

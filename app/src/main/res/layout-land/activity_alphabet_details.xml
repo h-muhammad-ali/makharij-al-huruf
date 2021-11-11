@@ -10,9 +10,8 @@
 
     <ImageView
         android:id="@+id/makhrijImage"
-        android:layout_width="409dp"
-        android:layout_height="289dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="389dp"
+        android:layout_height="237dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,9 +19,8 @@
         android:id="@+id/makhrijName"
         android:layout_width="337dp"
         android:layout_height="89dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="18dp"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/amiri"
         android:foregroundTint="#FFFFFF"
@@ -30,18 +28,14 @@
         android:textAlignment="center"
         android:textColor="#D4E8DC"
         android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/makhrijImage" />
 
     <TextView
         android:id="@+id/makhrijDetails"
-        android:layout_width="358dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
+        android:layout_width="299dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/amiri"
         android:text="TextView"
@@ -54,14 +48,14 @@
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/makhrijImage"
         app:layout_constraintTop_toBottomOf="@+id/type" />
 
     <TextView
         android:id="@+id/type"
-        android:layout_width="361dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="288dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/amiri"
         android:text="TextView"
@@ -70,6 +64,6 @@
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/makhrijName" />
+        app:layout_constraintStart_toEndOf="@+id/makhrijImage"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
