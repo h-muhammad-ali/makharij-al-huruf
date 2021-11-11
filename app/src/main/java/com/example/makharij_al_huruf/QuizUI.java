@@ -123,6 +123,7 @@ public class QuizUI extends AppCompatActivity implements View.OnClickListener{
                     args.putSerializable("correct", (Serializable)correctCounter);
                     intent.putExtra("BUNDLE",args);
                     startActivity(intent);
+                    finish();
                 }
                 break;
         }

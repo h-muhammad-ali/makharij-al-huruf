@@ -63,8 +63,7 @@ public class Result extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(Result.this, StartMenu.class);
-        startActivity(intent);
+        finish();
     }
 //    @Override
 //    protected void onDestroy() {
